@@ -1,0 +1,12 @@
+version: '3'
+services:
+  clientserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - 4444:4444
+    command: npm start
